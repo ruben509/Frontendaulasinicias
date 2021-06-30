@@ -8,26 +8,24 @@
 </head>
 <body>
     <div id="app">
-        <h2>lissta de tarefas</h2>
+        <h3>lissta de tarefas</h3>
         <ul>
-            <li v-for="item in tarefas">{{ item }}</li>
+            <li v-for="item in tarefas">{{item}}</li>
         </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script>
          new Vue({
-            el:'#app',
-            data:{
-                titulo='Hello world',
+            el: '#app',
+            data: {
+                texto: 'qualuer coisa',
                 tarefas:[
-                    'Excrecícios de html e css',
                     'Excrecícios de Javascrpit',
                     'Excrecícios de VueJS',
                     'Excrecícios de Angular',
                     'Juntar tudo no Projeto Toolbox2'
                 ]
             }
-        
         }) 
     </script>
 

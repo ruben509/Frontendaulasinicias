@@ -8,38 +8,37 @@
 </head>
 <body>
     <div id="app">
-        {{titulo}}
-        <h2>lissta de tarefas</h2>
+        {{texto}}
+        <h3>lissta de tarefas</h3>
         <input type="text" placeholder="Insere  um nova tarefa " v-model="novaTarefa" @keyup.enter="tarefas.push(novaTarefa)">
         <button @click="inseretarefa()">Inserir</button>
         <ul>
-            <li v-for="item in tarefas">{{tarefas.nome}}</li>
+            <li v-for="item in tarefas">{{item.nome}}</li>
         </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script>
          new Vue({
-            el:'#app',
-            data:{
-                titulo='Hello world',
+            el: '#app',
+            data: {
+                texto: 'Hello world',
                 novaTarefa:'',
                 tarefas:[
                     {nome:'Excrecícios de html e css'},
                     {nome:'Excrecícios de Javascrpit'},
                     {nome:'Excrecícios de VueJS'},
                     {nome:'Excrecícios de Angular'},
-                    {nome:'^JUNtar tudo no Projeto Toolbox2'}
+                    {nome:'Juntar tudo no Projeto Toolbox2'}
                 ]
             },
             methods:{
                 inseretarefa: function(){
                     if(!!this.novaTarefa){
-                        this.tarefas.push(nome:this.novaTarefa)
+                        this.tarefas.push({nome:+this.novaTarefa}),
                         this.novaTarefa=""
                     }
                 }
             }
-        
         }) 
     </script>
 
